@@ -1,0 +1,33 @@
+CS 2200 Summer 2022
+Project 4
+
+Name:Yongqi Ma
+GT Username: 903569868
+
+Problem 1C (FCFS Scheduler)
+----------
+
+When running an OS simulation with 1,2,4 CPUs, the total execution time does not decrease linearly with the number of CPUs. Instead, the decrease in total execution time is larger when going from 1 to 2 CPUs than when going from 2 to 4 CPUs as there is a higher level of CPU utilization and less waiting time for processes with 2 CPUs. with 4 CPUs there is a smaller improve to total execution time because there is more idle CPUs waiting for processes to become availble.
+
+Problem 2B (Round-Robin)
+----------
+
+When running a RR scheduler with different timeslices on a single CPU, there was a general inverted relationship between the total waiting time and timeslice length as timeslice creased, total waiting time increased. 
+
+In contrast, in a real OS, the shortest timeslice is usually not the best choice as it can lead to excessive context switching and reduced CPU utilization. Thus an optimal OS would strike a balance between the responsiveness (shorter timeslices) and throughput (longer timeslices).
+
+Problem 3C (Preemptive Priority with Aging)
+----------
+
+One way that operating systems can mitigate starvation in a priority scheduler is by implementing a technique called Aging. This technique involves gradually increasing the priority of processes that have been waiting in the system for an extended period of time. This allows older low priority processes to eventually be executed, while still giving higher priority processes their initial importance
+
+Problem 4 (The Priority Inversion Problem)
+---------
+
+One solution to this problem is to use a technique called priority inheritance. With priority inheritance, when a high priority process is blocked by a lower priority process that holds a resource it needs, the lower priority process temporarily inherits the higher priority of the blocked process. 
+
+This allows the lower priority process to complete its execution and release the resource needed by the high priority process. Once the resource is released and the high priority process is no longer blocked, the lower priority process returns to its original priority. 
+
+This can help prevent situations where a high priority process is indirectly blocked by a lower priority process and can help reduce starvation in a non-preemptive priority scheduler. 
+
+In the context of this problem, if the high priority process (P1) that wants to display a window is blocked because it needs a resource held by the low priority window manager process, then the window manager process could temporarily inherit the higher priority of P1. This would allow the window manager process to complete its execution and release the resource needed by P1. Once P1 is no longer blocked and can proceed with displaying the window, the window manager process would return to its original lower priority

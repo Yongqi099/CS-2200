@@ -1,0 +1,16 @@
+CS 2200 Spring 2023
+Homework 2
+
+Name:
+GT Username:
+
+Question 1
+----------
+
+/* Fix me */
+The sequence of instructions would first include performing LEA RA, 0. 
+This performs the first part of JALR by storing the incremented PC into RA.
+
+Second, because we have teh assumption, we can perform beq $zero, zero target which will
+unconditionally branch us to the value of target, thereby indirectly performing the JALR
+instructions.

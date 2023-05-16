@@ -1,0 +1,15 @@
+vaddr_t is virtual address type
+
+pte_t type definition for a page table entry. 
+Typically contains information about the  physical location 
+of a page in memory and other attributes
+
+fte_t
+frame table entry. A frame table is a data structure used by the 
+operating system to keep track of the physical memory frames and their usage
+
+memset()
+The syntax for memset is void *memset(void *ptr, int value, size_t num);. 
+The first argument ptr is a pointer to the block of memory to fill. 
+The second argument value is the value to be set. The third argument num specifies the number of bytes to be set to the value.
+
